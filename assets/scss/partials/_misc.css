@@ -1,0 +1,11 @@
+/* line 1, content/assets/scss/partials/_misc.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 5, content/assets/scss/partials/_misc.scss */
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}

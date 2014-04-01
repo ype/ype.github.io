@@ -1,0 +1,11 @@
+/* // modernizr class and Sass content inject for fallback code */
+/* @mixin no-svg { .no-svg & { @content } } */
+/* // mixin that requires filename without path or extension and optional extension override */
+/* @mixin svg-bkgd($filename, $extension: '.png') { */
+/*     background-image: image-url($filename + '.svg'); */
+/*     @include no-svg { background-image: image-url($filename + $extension); } */
+/* } */
+/* // apply svg and fallback background image to selector */
+/* .logo { */
+/*     @include svg-bkgd('company-logo'); */
+/* } */

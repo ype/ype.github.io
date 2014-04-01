@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'FiraSansLight';
+  src: url("../fonts/Fira/eot/FiraSans-Light-eot.eot");
+  src: url("../fonts/Fira/eot/FiraSans-Light-eot?#iefix.eot") format("embedded-opentype"), url("../fonts/Fira/woff/FiraSans-Light-woff.woff") format("woff"), url("../fonts/Fira/ttf/FiraSans-Light-ttf.ttf") format("truetype"), url("../fonts/Fira/otf/FiraSans-Light-otf.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../fonts/Fira/eot/FiraSans-Regular-eot.eot");
+  src: url("../fonts/Fira/eot/FiraSans-Regular-eot?#iefix.eot") format("embedded-opentype"), url("../fonts/Fira/woff/FiraSans-Regular-woff.woff") format("woff"), url("../fonts/Fira/ttf/FiraSans-Regular-ttf.ttf") format("truetype"), url("../fonts/Fira/otf/FiraSans-Regular-otf.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'FiraMono';
+  src: url("../fonts/Fira/eot/FiraMono-Regular-eot.eot");
+  src: url("../fonts/Fira/eot/FiraMono-Regular-eot?#iefix.eot") format("embedded-opentype"), url("../fonts/Fira/woff/FiraMono-Regular-woff.woff") format("woff"), url("../fonts/Fira/ttf/FiraMono-Regular-ttf.ttf") format("truetype"), url("../fonts/Fira/otf/FiraMono-Regular-otf.otf") format("opentype");
+}

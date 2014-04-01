@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+
+<title>(y_pe (Category: embedded))</title>
+<Link href="/assets/scss/application.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<Link href="/assets/scss/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="/assets/scss/print.css" media="print" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+    <link href="/assets/scss/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+<!-- you don't need to keep this, but it's cool for stats! -->
+<meta name="generator" content="nanoc 3.6.7"> 
+
+<link rel="icon" type="image/png" href="/assets/icons/47-ico.ico">
+
+
+
+    <style>
+      #TOC{ display: none; }
+      .text { width: 100% !important; }
+      .content {
+      text-align: center !important;
+      float: none !important;
+      <!-- margin: 0 auto !important; -->
+      max-width: 960px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap" class="page">
+      
+<div id="sidebar">
+  <nav class="sidebar">
+    <div class="sidebar-content">
+      <img src="/assets/img/isotypes/.png" style="height: auto; width: auto; max-height: 128px; padding: 10px;" alt="isotyperwriter"/>
+      <ul>
+	<li class="brand"><a data-instant="" href="/">y_pe</a></li>
+      </ul>
+      <div class="articles">
+	<ul id="articles">
+	  <li><a data-instant="" href="/about">About</a></li>
+	  <li><a data-instant="" href="/archive">Archive</a></li>
+	  <dl class="accordion">
+	    <dt id="recent"><a href="">Recent Articles</a></dt>
+	    
+	    <dd>
+	      <li>
+		<aside class="created_at">22-01-2014</aside>
+		<a data-instant="" href="/projects/from-arduino-to-arm/2014-01-21-stm-dev-notes.html">STM32 Development: Intro</a>
+	      </li>
+	    </dd>
+	    
+	    <dd>
+	      <li>
+		<aside class="created_at">08-11-2013</aside>
+		<a data-instant="" href="/2013/11/problematic-procrastination/">Problematic Procrastination</a>
+	      </li>
+	    </dd>
+	    
+	    <dd>
+	      <li>
+		<aside class="created_at">04-11-2013</aside>
+		<a data-instant="" href="/2013/11/virtually-a-new-beginning/">virtually, a new beginning</a>
+	      </li>
+	    </dd>
+	    
+	    <br />
+	    <hr />
+	    <dt><a href="">Projects</a></dt>
+	    <dd><li><a data-instant="" href="/projects/from-arduino-to-arm">From Arduino to ARM</a></li></dd>
+	    <dd><li><a data-instant="" href="/projects/lisp-apps-on-the-infobahn">Lisp Apps on the InfoBahn</a></li></dd>
+	    <br />
+	  </dl>
+	</ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+      <div class="content">
+	%section{:class => 'content'}
+    %h2
+        %em
+            = "#{tag.capitalize} Articles"
+%section{:class => 'section'}
+    - items_with_tag(tag).each do |item|
+        .blog-entry
+            -#%a(href="#{item}" title="Full article" class="permalink")= "&laquo; #{item[:title]}"
+            %aside
+              .date
+                  .month= get_post_month(item)
+                  .day= get_post_day(item)
+            %article
+                %h2= link_to item[:title], item.path
+                = find_and_preserve do
+                    = get_post_start(item)
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="/assets/js/instantclick.min.js" data-no-instant>
+	      InstantClick.init();
+</script>
+
+<script>
+ (function($) {
+
+   var allPanels = $('.accordion > dd').hide();
+
+   $('.accordion > dt > a').click(function() {
+     allPanels.slideUp('ease');
+
+     if($(this).parent().nextUntil( "br" ).is(':hidden')) {
+       $(this).parent().nextUntil( "br" ).slideDown('slow');
+     }
+     return false;
+   });
+
+ })(jQuery);
+</script>
+
+<script data-no-instant>
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-45893163-4']);
+ _gaq.push(['_trackPageview']);
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+   ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+ InstantClick.on('change', function() {
+  ga('send', 'pageview', location.pathname + location.search);
+});
+
+InstantClick.init();
+</script>
+
+  </body>
+</html>

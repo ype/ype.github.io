@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://isoty.pe/sitemap.xml
