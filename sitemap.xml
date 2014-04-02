@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://isoty.pe/</loc>
-    <lastmod>2014-02-09</lastmod>
+    <lastmod>2014-04-02</lastmod>
   </url>
   <url>
     <loc>http://isoty.pe/about/</loc>
@@ -303,6 +303,22 @@
   <url>
     <loc>http://isoty.pe/assets/icons/47-ico.ico</loc>
     <lastmod>2013-11-04</lastmod>
+  </url>
+  <url>
+    <loc>http://isoty.pe/assets/icons/social-github.png</loc>
+    <lastmod>2014-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://isoty.pe/assets/icons/social-linkedin.png</loc>
+    <lastmod>2014-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://isoty.pe/assets/icons/social-rss.png</loc>
+    <lastmod>2014-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://isoty.pe/assets/icons/social-twitter.png</loc>
+    <lastmod>2014-04-02</lastmod>
   </url>
   <url>
     <loc>http://isoty.pe/assets/img/2012-12-27 22.57.51.jpg</loc>
@@ -2845,12 +2861,16 @@
     <lastmod>2013-11-03</lastmod>
   </url>
   <url>
-    <loc>http://isoty.pe/2013/11/virtually-a-new-beginning/</loc>
+    <loc>http://isoty.pe/posts/2013-11-04-virtually-a-new-beginning/</loc>
     <lastmod>2014-03-12</lastmod>
   </url>
   <url>
-    <loc>http://isoty.pe/2013/11/problematic-procrastination/</loc>
+    <loc>http://isoty.pe/posts/2013-11-08-problematic-procrastination/</loc>
     <lastmod>2014-02-09</lastmod>
+  </url>
+  <url>
+    <loc>http://isoty.pe/posts/feed.xml</loc>
+    <lastmod>2014-04-01</lastmod>
   </url>
   <url>
     <loc>http://isoty.pe/projects/from-arduino-to-arm/</loc>
