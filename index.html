@@ -1,130 +1,39 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="html html element data formats markup languages faqs  help  and tutorials cascading style sheets authoring javascript">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="html element">
-<meta property="article:tag" content="data formats">
-<meta property="article:tag" content="markup languages">
-<meta property="article:tag" content="faqs  help  and tutorials">
-<meta property="article:tag" content="cascading style sheets">
-<meta property="article:tag" content="authoring">
-<meta property="article:tag" content="javascript">
-<title>(y_pe (emacs, electronics, and a bit of common lisp))</title>
-<Link href="/assets/scss/application.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<Link href="/assets/scss/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<link href="/assets/scss/print.css" media="print" rel="stylesheet" type="text/css" />
-<!--[if lt IE 8]>
-    <link href="/assets/scss/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
+---
+layout: default
+title: Home
+---
 
-<!-- you don't need to keep this, but it's cool for stats! -->
-<meta name="generator" content="nanoc 3.6.7">
-
-<link rel="icon" type="image/png" href="/assets/icons/47-ico.ico">
-
-    <style>
-     #TOC{ display: none; }
-     .text { width: 100% !important; }
-     .content {
-       text-align: center !important;
-       float: none !important;
-       margin: 0 auto !important;
-       width: 100% !important;
-       max-width: 960px;
-     }
-     .brand {
-       font-size: 1.5em;
-       padding: 1px 15px 20px;
-     }
-     li {
-       display: inline-block;
-       list-style-type: none !important;
-     }
-    </style>
-  </head>
-  <body>
-    <div id="wrap" class="page large-background">
-      
-<div class="brand-header">
-  <img src="/assets/img/isotypes/146.png" style="height: auto; width: auto; max-height: 256px; padding: 10px;" alt="isotyperwriter"/>
-  <h1 class="brand-logo">y_pe</h1>
+<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
+	{% include top.html %}
+	<div id="home-title">
+		<a href="{{ site.url }}">
+			<img src="{{ site.icon }}" class="site-icon">
+		</a>
+	</div>
+</header>
+<div id="post-list">
+	{% for post in paginator.posts %}
+		<div>
+			<span class="post-date">{{ post.date | date_to_long_string }}</span>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
+		</div>
+		<br>
+	{% endfor %}
 </div>
-
-
-      <div class="content">
-	<div class="section" id="a-blog-about-stuff">
-<h3>a blog about stuff</h3>
-<br><div class="panel" style="float:none; margin: 0 auto;">
-<a href="https://github.com/ype" width="48" title="Github"><img src="./assets/icons/social-github.png" alt="Github"></a>
-<a href="http://twitter.com/isoty_pe" width="48" title="Twitter"><img src="./assets/icons/social-twitter.png" alt="Twitter"></a>
-<a href="http://uk.linkedin.com/in/01100001" width="48" title="Linkedin"><img src="./assets/icons/social-linkedin.png" alt="Linkedin"></a>
-<a href="/posts/feed.xml" width="48" title="RSS"><img src="./assets/icons/social-rss.png" alt="RSS"></a>
-</div>
-<br><div class="section" id="recent-articles">
-<h1>Recent Articles</h1>
-<ul>
-<div class="panel">
-      <aside class="created_at">January 22, 2014</aside><li><a href="/projects/from-arduino-to-arm/2014-01-21-stm-dev-notes.html">STM32 Development: Intro</a></li>
-    </div>
-
-    <div class="panel">
-      <aside class="created_at">November 08, 2013</aside><li><a href="/posts/2013-11-08-problematic-procrastination/">Problematic Procrastination</a></li>
-    </div>
-
-    <div class="panel">
-      <aside class="created_at">November 04, 2013</aside><li><a href="/posts/2013-11-04-virtually-a-new-beginning/">virtually, a new beginning</a></li>
-    </div>
-
-</ul>
-<br>
-</div>
-</div>
-      </div>
-    </div>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script src="/assets/js/instantclick.min.js" data-no-instant>
-	      InstantClick.init();
-</script>
-
-<script>
- (function($) {
-
-   var allPanels = $('.accordion > dd').hide();
-
-   $('.accordion > dt > a').click(function() {
-     allPanels.slideUp('ease');
-
-     if($(this).parent().nextUntil( "br" ).is(':hidden')) {
-       $(this).parent().nextUntil( "br" ).slideDown('slow');
-     }
-     return false;
-   });
-
- })(jQuery);
-</script>
-
-<script data-no-instant>
- var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-45893163-4']);
- _gaq.push(['_trackPageview']);
- (function() {
-   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-
-   ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-
-   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
-
- InstantClick.on('change', function() {
-  ga('send', 'pageview', location.pathname + location.search);
-});
-
-InstantClick.init();
-</script>
-
-  </body>
-</html>
+<nav class="pagination" role="navigation">
+	{% if paginator.next_page %}
+		<a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+	{% endif %}
+	<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.previous_page %}
+		{% if paginator.page == 2 %}
+			<a class="older-posts" href="/">Newer posts &rarr;</a>
+		{% else %}
+			<a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+		{% endif %}
+	{% endif %}
+</nav>
+<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
+	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
+</footer>
