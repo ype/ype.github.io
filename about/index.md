@@ -1,14 +1,12 @@
 ---
 layout: page
-title: About the site, the author, the life, the universe and everything more.
+title: About some stuff.
 ---
 
 <div class="message">
-  This page will be ready soon! Meanwhile, stay with this beautiful latin text below.
-</div>
-
 Hi, my name is Anton, and I like colouring, long walks on the beach,
 and getting caught in almost inevitable London rain.
+</div>
 
 I'm a electronics building, code hacking, e-textiles sewing,
 unfortunately jaded individual - who uses Emacs out of spite.
