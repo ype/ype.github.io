@@ -4,7 +4,7 @@
  <title>ype</title>
  <link href="http://ype.env.sh/atom.xml" rel="self"/>
  <link href="http://ype.env.sh/"/>
- <updated>2014-05-12T11:47:17+01:00</updated>
+ <updated>2014-05-12T23:33:23+01:00</updated>
  <id>http://ype.env.sh</id>
  <author>
    <name>anton</name>
@@ -52,7 +52,7 @@ simple lines to my dotemacs file I am not able to find, replace, and
 view a single keyword across multiple files within a matter of
 seconds.&lt;/p&gt;
 
-&lt;h1&gt;Adding Ag to Emacs (the code bit)&lt;/h1&gt;
+&lt;h1&gt;Adding some silver to your search (the code bit)&lt;/h1&gt;
 
 &lt;p&gt;First you are going to have to make sure you have ag installed.&lt;/p&gt;
 
@@ -75,27 +75,32 @@ homebrew installed already, join the future and install it)&lt;/p&gt;
 
 &lt;h2&gt;In your dotemacs&lt;/h2&gt;
 
-&lt;p&gt;In your dotemacs you&amp;rsquo;re going to need a few things. (make sure to use
-M-x package-install to get the required packages (ag) (wgrep))&lt;/p&gt;
+&lt;p&gt;In your dotemacs you need a few things. (before you do anything use
+&lt;code&gt;M-x package-install&lt;/code&gt; to get the required packages &lt;code&gt;ag&lt;/code&gt; and &lt;code&gt;wgrep&lt;/code&gt;
+(optional (projectile)) ;;it makes things a whole lot nicer&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;executable-find&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;ag&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;wgrep-ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;setq-default&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ag-highlight-search&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;H-q&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;ag-project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;H-z&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;projectile-ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;H-z&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;projectile-ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; if you have projectile&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;As you might noticed I am using Hyper-q (H-q) and Hyper-z (H-z) as
+&lt;p&gt;As you might noticed I am using Hyper-q &lt;code&gt;H-q&lt;/code&gt; and Hyper-z &lt;code&gt;H-z&lt;/code&gt; as
 hot keys for ag-*(whatever), you can change these to suit your
 preferred keybinding style.&lt;/p&gt;
 
-&lt;p&gt;A few other useful keybindings you may want to check out are C-x C-p,
-this makes the search buffer writable and lets you edit results
-inline. Also, C-c C-f, which activates {next-error-follow-minor-mode} -
-which is a nifty feature that quickly shuttles you to the file for the
-result your cursor is currently over.&lt;/p&gt;
+&lt;p&gt;A few other useful keybindings you may want to check out are &lt;code&gt;C-x
+C-p&lt;/code&gt;, this makes the search buffer writable and lets you edit results
+inline. Also, &lt;code&gt;C-c C-f&lt;/code&gt;, which activates
+&lt;code&gt;next-error-follow-minor-mode&lt;/code&gt;, a nifty feature that quickly opens the
+file matching the search result your cursor is currently over.&lt;/p&gt;
 
-&lt;p&gt;Here&amp;rsquo;s a little demo of how I&amp;rsquo;m using it with my project, Accent, a
-music live coding environment for the web.&lt;/p&gt;
+&lt;p&gt;The gif show at the top of this page is a demo of how I use it to
+navigate my emacs.d nightmare...here it is again so you don&amp;#39;t have to
+scroll up to see it.&lt;/p&gt;
+
+&lt;div&gt;&lt;img src=&quot;/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif&quot; alt=&quot;Silver Searching in Emacs&quot; width=&quot;100%&quot; /&gt;
+&lt;blockquote style=&quot;border-left: 10px solid #D5D5D5;&quot;&gt;Silver Searching in Emacs&lt;/blockquote&gt;&lt;/div&gt;
 
 &lt;h1&gt;In (somewhat of a haphazard) Conclusion&lt;/h1&gt;
 

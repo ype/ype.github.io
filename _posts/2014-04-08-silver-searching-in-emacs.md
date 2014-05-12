@@ -1,6 +1,6 @@
 ---
 title: Silver Searching in Emacs
-quote: Using ag in Emacs to Get Stuff Done, FAST!
+quote: Get Stuff Done, FAST!
 author: Anton Strilchuk
 created: 04-08-2014
 status: Completed
@@ -19,7 +19,7 @@ keywords:
 - keyboard shortcut
 - os x
 - emacs lisp
-image: /media/2014-04-08-silver-searching-in-emacs/cover.jpg
+image: /media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif
 video: false
 ---
 
@@ -58,7 +58,7 @@ simple lines to my dotemacs file I am not able to find, replace, and
 view a single keyword across multiple files within a matter of
 seconds.
 
-# Adding Ag to Emacs (the code bit)
+# Adding some silver to your search (the code bit)
 
 First you are going to have to make sure you have ag installed.
 
@@ -81,8 +81,9 @@ homebrew installed already, join the future and install it)
 
 ## In your dotemacs
 
-In your dotemacs you&rsquo;re going to need a few things. (make sure to use
-M-x package-install to get the required packages (ag) (wgrep))
+In your dotemacs you need a few things. (before you do anything use
+`M-x package-install` to get the required packages `ag` and `wgrep`
+(optional (projectile)) ;;it makes things a whole lot nicer
 
 ```lisp
 (when (executable-find "ag")
@@ -90,21 +91,24 @@ M-x package-install to get the required packages (ag) (wgrep))
   (require 'wgrep-ag)
   (setq-default ag-highlight-search t)
   (global-set-key (kbd "H-q") 'ag-project)
-  (global-set-key (kbd "H-z") 'projectile-ag))
+  (global-set-key (kbd "H-z") 'projectile-ag)) ; if you have projectile
 ```
 
-As you might noticed I am using Hyper-q (H-q) and Hyper-z (H-z) as
+As you might noticed I am using Hyper-q `H-q` and Hyper-z `H-z` as
 hot keys for ag-\*(whatever), you can change these to suit your
 preferred keybinding style.
 
-A few other useful keybindings you may want to check out are C-x C-p,
-this makes the search buffer writable and lets you edit results
-inline. Also, C-c C-f, which activates {next-error-follow-minor-mode} -
-which is a nifty feature that quickly shuttles you to the file for the
-result your cursor is currently over.
+A few other useful keybindings you may want to check out are `C-x
+C-p`, this makes the search buffer writable and lets you edit results
+inline. Also, `C-c C-f`, which activates
+`next-error-follow-minor-mode`, a nifty feature that quickly opens the
+file matching the search result your cursor is currently over.
 
-Here&rsquo;s a little demo of how I&rsquo;m using it with my project, Accent, a
-music live coding environment for the web.
+The gif show at the top of this page is a demo of how I use it to
+navigate my emacs.d nightmare...here it is again so you don't have to
+scroll up to see it.
+
+{% include image.html url="/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif" width="100%" description="Silver Searching in Emacs" %}
 
 # In (somewhat of a haphazard) Conclusion
 

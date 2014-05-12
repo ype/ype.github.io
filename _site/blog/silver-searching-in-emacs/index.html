@@ -4,10 +4,10 @@
 	<link href="http://gmpg.org/xfn/11" rel="profile">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="canonical" href="http://ype.env.sh/blog/silver-searching-in-emacs" />
-	<meta name="description" content="Using ag in Emacs to Get Stuff Done, FAST!" />
-	<meta property="og:description" content="Using ag in Emacs to Get Stuff Done, FAST!" />
-	<meta itemprop="image" content="http://ype.env.sh/media/2014-04-08-silver-searching-in-emacs/cover.jpg" />
-	<meta property="og:image" content="http://ype.env.sh/media/2014-04-08-silver-searching-in-emacs/cover.jpg" />
+	<meta name="description" content="Get Stuff Done, FAST!" />
+	<meta property="og:description" content="Get Stuff Done, FAST!" />
+	<meta itemprop="image" content="http://ype.env.sh/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif" />
+	<meta property="og:image" content="http://ype.env.sh/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif" />
 	<meta property="og:title" content="Silver Searching in Emacs" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="http://ype.env.sh/blog/silver-searching-in-emacs" />
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-	<header class="clean" style="background-image: url(/media/2014-04-08-silver-searching-in-emacs/cover.jpg);height: 100%;">
+	<header class="clean" style="background-image: url(/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif);height: 100%;">
 	
 	<label class="menu" for="_1">
   <span class="genericon genericon-menu"></span>
@@ -60,7 +60,7 @@
 	<div id="post-info">
 		<h1>Silver Searching in Emacs</h1>
 		
-		<h2>Using ag in Emacs to Get Stuff Done, FAST!</h2>
+		<h2>Get Stuff Done, FAST!</h2>
 		
 		08 April 2014
 	</div>
@@ -105,7 +105,7 @@ simple lines to my dotemacs file I am not able to find, replace, and
 view a single keyword across multiple files within a matter of
 seconds.</p>
 
-<h1>Adding Ag to Emacs (the code bit)</h1>
+<h1>Adding some silver to your search (the code bit)</h1>
 
 <p>First you are going to have to make sure you have ag installed.</p>
 
@@ -128,27 +128,32 @@ homebrew installed already, join the future and install it)</p>
 
 <h2>In your dotemacs</h2>
 
-<p>In your dotemacs you&rsquo;re going to need a few things. (make sure to use
-M-x package-install to get the required packages (ag) (wgrep))</p>
+<p>In your dotemacs you need a few things. (before you do anything use
+<code>M-x package-install</code> to get the required packages <code>ag</code> and <code>wgrep</code>
+(optional (projectile)) ;;it makes things a whole lot nicer</p>
 <div class="highlight"><pre><code class="lisp language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">executable-find</span> <span class="s">&quot;ag&quot;</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;ag</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;wgrep-ag</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">setq-default</span> <span class="nv">ag-highlight-search</span> <span class="no">t</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&quot;H-q&quot;</span><span class="p">)</span> <span class="ss">&#39;ag-project</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&quot;H-z&quot;</span><span class="p">)</span> <span class="ss">&#39;projectile-ag</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&quot;H-z&quot;</span><span class="p">)</span> <span class="ss">&#39;projectile-ag</span><span class="p">))</span> <span class="c1">; if you have projectile</span>
 </code></pre></div>
-<p>As you might noticed I am using Hyper-q (H-q) and Hyper-z (H-z) as
+<p>As you might noticed I am using Hyper-q <code>H-q</code> and Hyper-z <code>H-z</code> as
 hot keys for ag-*(whatever), you can change these to suit your
 preferred keybinding style.</p>
 
-<p>A few other useful keybindings you may want to check out are C-x C-p,
-this makes the search buffer writable and lets you edit results
-inline. Also, C-c C-f, which activates {next-error-follow-minor-mode} -
-which is a nifty feature that quickly shuttles you to the file for the
-result your cursor is currently over.</p>
+<p>A few other useful keybindings you may want to check out are <code>C-x
+C-p</code>, this makes the search buffer writable and lets you edit results
+inline. Also, <code>C-c C-f</code>, which activates
+<code>next-error-follow-minor-mode</code>, a nifty feature that quickly opens the
+file matching the search result your cursor is currently over.</p>
 
-<p>Here&rsquo;s a little demo of how I&rsquo;m using it with my project, Accent, a
-music live coding environment for the web.</p>
+<p>The gif show at the top of this page is a demo of how I use it to
+navigate my emacs.d nightmare...here it is again so you don&#39;t have to
+scroll up to see it.</p>
+
+<div><img src="/media/2014-04-08-silver-searching-in-emacs/silverSearcher.gif" alt="Silver Searching in Emacs" width="100%" />
+<blockquote style="border-left: 10px solid #D5D5D5;">Silver Searching in Emacs</blockquote></div>
 
 <h1>In (somewhat of a haphazard) Conclusion</h1>
 
