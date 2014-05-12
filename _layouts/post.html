@@ -15,16 +15,18 @@ article: true
 	<div id="post-info">
 		<h1>{{ page.title }}</h1>
 		{% if page.quote %}
-			<h2>{{ page.quote }}</h2>
+		<h2>{{ page.quote }}</h2>
 		{% endif %}
-		<a class="site-title" href="{{ site.url }}"><img src="{{ site.icon }}" class="site-icon-small">{{ site.title }}</a>, in {{ page.date | date_to_long_string }}
+		{{ page.date | date_to_long_string }}
 	</div>
 	<div id="nav-icon" style="bottom: 60px;">
 		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-expand"></span></a>
 	</div>
 </header>
 <div id="article">
+  <div class="post">
 	{{ content }}
+  </div>
 </div>
 {% for post in site.related_posts limit:1 %}
 <footer class="{% if post.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.cover }}{% endif %});{% if post.background_position %} background-position: {{ post.background_position }};{% endif %}height: 75%; min-height: 500px;">

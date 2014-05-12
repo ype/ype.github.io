@@ -6,47 +6,42 @@ pygments:	true
 permalink:	/blog/:title
 
 # Setup
-title:		Thinny
-tagline:	'blog'
-description:	'My personal blog.'
-url:		http://camporez.com
+title:		ype
+tagline:	'a blog about stuff'
+description:	'A blog about stuff, and code, and electronics, and other stuff.'
+url:		http://ype.env.sh
 
 author:
-  name:		'Ian Camporez Brunelli'
-  url:		https://google.com/+IanCamporezBrunelli
+  name:		'anton'
+  url:		https://ype.env.sh
 
 paginate:	5
 
 # Custom vars
 icon:		/assets/images/icon.png
-cover:		/assets/images/cover.jpg
+cover:		/assets/images/sewKit.jpg
 
 social:
-  - icon:	twitter
-    url:	https://twitter.com/iancamporez
-    desc:	Follow me on twitter
-
   - icon:	github
-    url:	https://github.com/camporez
-    desc:	Fork me on github
-
-  - icon:	googleplus-alt
-    url:	https://google.com/+IanCamporezBrunelli
-    desc:	Add me on google+
+    url:	https://github.com/ype
+    desc:	Fork me
 
   - icon:	feed
-    url:	http://camporez.com/atom.xml
-    desc:	Subscribe to my feed
-    
+    url:	http://ype.env.sh/atom.xml
+    desc:	Feed
+
 menu:
   - title:	Home
     url:	/
-    
+
   - title:	About
     url:	/about
-    
+
+  - title:      Archive
+    url:        /archive
+
 copyright:
-  author:	Camporez
-  url:		http://camporez.com
-  type_title:	Some rights reserved
-  type_url:	http://creativecommons.org/licenses/by-nc/2.5
+  author:	anton
+  url:		http://ype.env.sh
+  type_title:	Some rights might be reserved, who really cares?
+  type_url:	http://www.wtfpl.net/

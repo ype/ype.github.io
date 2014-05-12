@@ -2,7 +2,8 @@
 
 #post-info {
 	width: 700px;
-	left: 50%;
+	left: 0;
+        padding-left: 5%;
 	margin-left: -350px;
 	bottom: 100px;
 }
