@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-Bold.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-Bold.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+    font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-ExtraLight.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-ExtraLight.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+    font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-Heavy.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+    font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-Light.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-Light.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  300;
+}
+
+@font-face {
+    font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-Medium.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-Medium.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+    font-family: 'KozGoPro';
+  src: url('eot/KozGoPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozGoPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozGoPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozGoPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>ype</title>
+ <link href="http://ype.env.sh/atom.xml" rel="self"/>
+ <link href="http://ype.env.sh/"/>
+ <updated>2014-05-12T11:03:25+01:00</updated>
+ <id>http://ype.env.sh</id>
+ <author>
+   <name>anton</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Silver Searching in Emacs</title>
+   <link href="http://ype.env.sh/blog/silver-searching-in-emacs"/>
+   <updated>2014-04-08T00:00:00+01:00</updated>
+   <id>http://ype.env.sh/blog/silver-searching-in-emacs</id>
+   <content type="html">&lt;p&gt;&lt;span class=&quot;dropcap&quot;&gt;I&lt;/span&gt; always seem to run into the constant
+problem of having to change multiple variables, symbols, function
+names, and other usually mundane parts of my code on a regular
+basis. Most likely due to the fact that I first name everything in a
+random, train of thought manner, only realising later that a more
+useful, explanatory definition is required.&lt;/p&gt;
+
+&lt;p&gt;Up until last night I found myself opening and closing multiple files
+after spending a few minutes in each finding and replacing keywords,
+and then ultimately running my code to find out I missed a few in this
+file, and a few in that file.&lt;/p&gt;
+
+&lt;p&gt;Take for example two files - one named foobar, and the other named
+foofoo. In both foobar and foofoo I have a something with the keywords
+foofunct. Now this something (variable, function, whatever) needs to
+have the same name in both these files. So I decided while editing
+the first file foobar that I want to change foofunct to foodef. With
+the change made to foobar lock in place and saved, I attempt to run my
+code, ultimately to be greeted by the wonderful world of errors saying
+something of the sort &amp;ldquo;your doing it wrong, I can&amp;rsquo;t find your flipping
+foofunct in foofoo anymore because it&amp;rsquo;s not in foobar&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Now this is an ongoing problem I&amp;rsquo;ve had and have always thought there
+has to be a better way&amp;#x2026;&lt;/p&gt;
+
+&lt;h1&gt;Well maybe I&amp;#39;m just ignorant&lt;/h1&gt;
+
+&lt;p&gt;Enter &amp;ldquo;The Silver Searcher&amp;rdquo; or &amp;ldquo;ag&amp;rdquo; for sort. Ag is a wonderful
+command line tool that lets you quickly search a code file, or set of
+files, to find a specific keyword within those file. Ag from the
+command line is awesome, but Ag in Emacs is amazing. By adding a few
+simple lines to my dotemacs file I am not able to find, replace, and
+view a single keyword across multiple files within a matter of
+seconds.&lt;/p&gt;
+
+&lt;h1&gt;Adding Ag to Emacs (the code bit)&lt;/h1&gt;
+
+&lt;p&gt;First you are going to have to make sure you have ag installed.&lt;/p&gt;
+
+&lt;p&gt;On Mac you can do this through homebrew very easily (if you don&amp;rsquo;t have
+homebrew installed already, join the future and install it)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Homebrew&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ brew install the_silver_searcher
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Macports&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ port install the_silver_searcher
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Linux (Debian/Ubuntu)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ apt-get install silversearcher-ag
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;note: substitute &lt;code&gt;apt-get&lt;/code&gt; for whichever package manager you use regularly&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;In your dotemacs&lt;/h2&gt;
+
+&lt;p&gt;In your dotemacs you&amp;rsquo;re going to need a few things. (make sure to use
+M-x package-install to get the required packages (ag) (wgrep))&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;executable-find&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;ag&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;wgrep-ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;setq-default&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ag-highlight-search&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;H-q&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;ag-project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kbd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;H-z&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;projectile-ag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you might noticed I am using Hyper-q (H-q) and Hyper-z (H-z) as
+hot keys for ag-*(whatever), you can change these to suit your
+preferred keybinding style.&lt;/p&gt;
+
+&lt;p&gt;A few other useful keybindings you may want to check out are C-x C-p,
+this makes the search buffer writable and lets you edit results
+inline. Also, C-c C-f, which activates {next-error-follow-minor-mode} -
+which is a nifty feature that quickly shuttles you to the file for the
+result your cursor is currently over.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a little demo of how I&amp;rsquo;m using it with my project, Accent, a
+music live coding environment for the web.&lt;/p&gt;
+
+&lt;h1&gt;In (somewhat of a haphazard) Conclusion&lt;/h1&gt;
+
+&lt;p&gt;With the setup complete you can now move you cursor over any variable,
+function name, definition, word, whatever and run ag on it to find all
+the uses of it in either a project, file, or if you&amp;rsquo;re feel
+ambitious your entire system (be warned, this sucks the life out of
+everything and may take a billion years to complete)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Problematic Procrastination</title>
+   <link href="http://ype.env.sh/blog/problematic-procrastination"/>
+   <updated>2013-11-08T00:00:00+00:00</updated>
+   <id>http://ype.env.sh/blog/problematic-procrastination</id>
+   <content type="html">&lt;p&gt;&lt;span class=&quot;dropcap&quot;&gt;It&lt;/span&gt; never ceases to amaze me how long I can procrastinate before
+actually deciding to get shit done. It would maybe be not as troubling
+if I hated what I do on a daily basis, or the work that I had to get
+done was mind numbing dull, but it&amp;rsquo;s unfortunately not (I saw
+unfortunately because then I would have an excuse as to why I&amp;rsquo;m a lazy
+sod).&lt;/p&gt;
+
+&lt;h2&gt;Brief notes on a day&lt;/h2&gt;
+
+&lt;p&gt;I would like to say I wake up energised and rearing to go, but like
+most, I wake in a fog, dragging my sulking ass out of bed, trying
+desperately to summon some celestial force to help me muster the focus
+to stay on track with tasks I need to get done. Side note: Freelance
+is the procrastinators worst nightmare (although I have found many a
+way to procrastinate in a normal work environment as well, see also:
+reverse toilet sleeping)&lt;/p&gt;
+
+&lt;p&gt;After raking large amounts of crust from my tired eyes I start my
+already behind day with a cup of tea and a wonderfully delicious
+cigarette (if you don&amp;rsquo;t smoke you should try it, really it&amp;rsquo;s a lot of
+fun (no sarcasm, just pure smoking love))&lt;/p&gt;
+
+&lt;p&gt;Smoking and tea drinking over, I either turn on some stupid cartoon on
+one of a handful of streaming TV websites and proceed to say at the
+end of every episode &amp;ldquo;after this one I&amp;rsquo;ll get to work&amp;rdquo; - this has
+become problematic to the point that I downloaded an app to block
+specific sites (unfortunately I never turn this app on).&lt;/p&gt;
+
+&lt;p&gt;Once TV show watching has been completed I continue doing absolutely
+useless, time wasting activities - one of my favourite being the
+aimless pursuit of customising Emacs to the point of insanity.&lt;/p&gt;
+
+&lt;h2&gt;The Emacs Curse&lt;/h2&gt;
+
+&lt;p&gt;I believe Richard Stallman whilst designing Emacs, deviously devised
+to create a piece of shit, almost text editor, time vampire that was
+more addictive then Facebook or all its other time sucking
+compadres.&lt;/p&gt;
+
+&lt;p&gt;Half serial time killer, half insane genius, Stallman created the bane
+of my existence, as for some reason I feel as though changing my
+dotemacs file is somehow kind of like doing actual work - this is not
+the case.&lt;/p&gt;
+
+&lt;h2&gt;The calm after the storm&lt;/h2&gt;
+
+&lt;p&gt;With the drudge through the wasteland that is my morning over, actual
+money making, cash flowing work can begin - this usually means
+possibly taking a shower and then eating food so that around 3pm I can
+start sewing, soldering, or hacking some slapped together, haphazardly
+made project together.&lt;/p&gt;
+
+&lt;p&gt;All in all work does get done and deadlines are hit, but oh how I
+crave the day when this process is mitigated down to a streamline
+flow making a 40 hour work week possibly possible.&lt;/p&gt;
+
+&lt;h1&gt;In (ardently needed) conclusion&lt;/h1&gt;
+
+&lt;p&gt;It&amp;rsquo;s a love hate thing in my opinion - procrastination is beautiful -
+almost wonderful to say the least - the unfortunate part is that
+ignorance does not exist, making it virtually impossible to forget the
+fact that if all the chaff could be removed, I might actually build
+something useful for myself, and possibly others.&lt;/p&gt;
+
+&lt;p&gt;Another 20 minutes down the drain writing this god forsaken pile of
+empty words - I really hope you didn&amp;rsquo;t read to the end of this - if so
+go to some work, or find a better blog to read.&lt;/p&gt;
+
+&lt;p&gt;I like turtles.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>virtually, a new beginning</title>
+   <link href="http://ype.env.sh/blog/virtually-a-new-beginning"/>
+   <updated>2013-11-04T00:00:00+00:00</updated>
+   <id>http://ype.env.sh/blog/virtually-a-new-beginning</id>
+   <content type="html">&lt;p&gt;I decided, one fateful day (or maybe not so fateful, but rather
+ill-conceived) - that it would be a good idea to blog using orgmode. I
+use orgmode for many things - scheduling, expenses, charts of varying
+kind, time-tracking, the list goes on. Blogging in org seemed like a
+natural extension of this already ill-fated, ill-conceived, awesomely
+nerd trapped system I have developed for myself.&lt;/p&gt;
+
+&lt;h2&gt;How it all came together&lt;/h2&gt;
+
+&lt;p&gt;This blog uses a combination of a few tools that have become very dear
+to me - the aforementioned orgmode, ispell (because I&amp;rsquo;m using friggin
+emacs to write all this drivel), a ruby static site generator - nanoc,
+and some hacked together bits of code (one of which is org-ruby, I&amp;rsquo;ll
+explain this one in detail at a later time - there is a surprisingly
+limited amount of documentation on how to use it effectively)&lt;/p&gt;
+
+&lt;p&gt;All of this heaping junk pile of snippets has come together in
+isoty.pe - my effort to help clog the stinking drain that the Internet
+has become (don&amp;rsquo;t get me wrong I spend a good majority of my time in
+this cesspool of delights).&lt;/p&gt;
+
+&lt;h2&gt;In [very needed] Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I feel I should warn, alert, tell you what you will encounter on this
+site - don&amp;rsquo;t be afraid, it&amp;rsquo;s not a NSFW warning (it could be a little
+though I guess, as your boss probably would not enjoy you wasting
+endless hours looking at pointless pictures of pandas) - the site is
+my endless hacking, tweaking, replace-stringing of the various tools I
+use on a daily basis to GSD (for the GTD crowd GSD is my version where
+I replace the David Allen acronym &amp;ldquo;Get Things Down&amp;rdquo; with the more
+work appropriate &amp;ldquo;Get Shit Done&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy this journey to the deep, bon voyage to sanity, this
+different, but hopefully better foray into Internet cesspiting.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

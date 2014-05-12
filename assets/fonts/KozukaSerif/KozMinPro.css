@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Bold.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Bold.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-ExtraLight.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-ExtraLight.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Heavy.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Light.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Light.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Medium.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Medium.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'KozMinPro';
+  src: url('eot/KozMinPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('eot/KozMinPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('woff/KozMinPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('ttf/KozMinPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
