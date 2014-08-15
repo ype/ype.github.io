@@ -16,13 +16,23 @@ header {
     position: relative;
 }
 
+.branding {
+    color: #383838;
+    text-align: center;
+    font-size: 10em;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-top: 0;
+    font-family: "SabonNext RW SC", serif;
+}
+
 header, footer {
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
-    font-family: "KozGoPro", Sans-serif;
+    font-family: "Sabon Expert BQ", serif;
 }
 
 header a, footer a {
@@ -40,7 +50,7 @@ p {
     margin-bottom: 10px;
     font-size: 1em;
     color: #515151;
-    font-family: "KozMinPro", serif;
+    font-family: "Sabon Expert BQ", serif;
 }
 
 a {
@@ -76,7 +86,7 @@ img {
     padding-top: 4px;
     padding-right: 8px;
     padding-left: 3px;
-    font-family: "Ryman Eco", serif;
+    font-family: "Sabon Expert BQ", serif;
 }
 
 /* Don't show shadows when selecting text */
@@ -123,12 +133,13 @@ img {
 }
 
 #home-title {
-    height: 150px;
+    height: 100%;
     text-align: center;
     left: 50%;
-    top: 50%;
+    top: 0;
     position: absolute;
     z-index: 1;
+
 }
 
 img.site-icon {
@@ -180,7 +191,7 @@ img.site-icon-page {
 }
 
 #article {
-    font-family: "KozGoPro", serif;
+    font-family: "Sabon Expert BQ", serif;
     font-weight: 400;
     letter-spacing: 0px;
     font-size:20px;
@@ -379,7 +390,7 @@ blockquote p {
     position: relative;
     margin-top: 30px;
     text-align: center;
-    font-family: "KozGoPro", Sans-serif;
+    font-family: "Sabon Expert BQ", serif;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -432,7 +443,7 @@ blockquote p {
 }
 
 #post-list {
-    font-family: "KozGoPro", Sans-serif;
+    font-family: "Sabon Expert BQ", serif;
     top: 50px;
     padding-bottom: 80px;
     font-weight: 400;
@@ -472,7 +483,7 @@ blockquote p {
 .post-description {
     color: #777;
     font-size: 15pt;
-    font-family: "KozMinPro", serif;
+    font-family: "Sabon Expert BQ", serif;
 }
 
 .post-date {

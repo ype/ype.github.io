@@ -21,7 +21,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Regular';
     src: url('eot/FiraSans-Regular.eot');
     src: local('Fira Sans Regular'),
          url('eot/FiraSans-Regular.eot') format('embedded-opentype'),
@@ -32,7 +32,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Regular Italic';
     src: url('eot/FiraSans-RegularItalic.eot');
     src: local('Fira Sans Regular Italic'),
          url('eot/FiraSans-RegularItalic.eot') format('embedded-opentype'),
@@ -43,7 +43,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Medium';
     src: url('eot/FiraSans-Medium.eot');
     src: local('Fira Sans Medium'),
          url('eot/FiraSans-Medium.eot') format('embedded-opentype'),
@@ -54,7 +54,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Medium Italic';
     src: url('eot/FiraSans-MediumItalic.eot');
     src: local('Fira Sans Medium Italic'),
          url('eot/FiraSans-MediumItalic.eot') format('embedded-opentype'),
@@ -65,7 +65,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Bold';
     src: url('eot/FiraSans-Bold.eot');
     src: local('Fira Sans Bold'),
          url('eot/FiraSans-Bold.eot') format('embedded-opentype'),
@@ -76,7 +76,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Bold Italic';
     src: url('eot/FiraSans-BoldItalic.eot');
     src: local('Fira Sans Bold Italic'),
          url('eot/FiraSans-BoldItalic.eot') format('embedded-opentype'),
@@ -87,7 +87,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Mono';
+    font-family: 'Fira Mono Regular';
     src: url('eot/FiraMono-Regular.eot');
     src: local('Fira Mono'),
          url('eot/FiraMono-Regular.eot') format('embedded-opentype'),
@@ -98,7 +98,7 @@
 }
 
 @font-face{
-    font-family: 'Fira Mono';
+    font-family: 'Fira Mono Bold';
     src: url('eot/FiraMono-Bold.eot');
     src: local('Fira Mono Bold'),
          url('eot/FiraMono-Bold.eot') format('embedded-opentype'),
