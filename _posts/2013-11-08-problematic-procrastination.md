@@ -3,6 +3,7 @@ title: Problematic Procrastination
 subtitle: when all you need to get done, doesn't.
 created: 08-11-2013
 status: Complete
+comments: true
 format: org
 isonum: 373
 layout: post

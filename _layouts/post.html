@@ -25,7 +25,10 @@ article: true
 </header>
 <div id="article">
   <div class="post">
-	{{ content }}
+    {{ content }}
+    {% if page.comments %}
+    {% include comments.html %}
+    {% endif %}
   </div>
 </div>
 {% for post in site.related_posts limit:1 %}
@@ -46,3 +49,4 @@ article: true
 </footer>
 {% endfor %}
 <script src="/assets/js/smooth-scroll.js"></script>
+{% include google_analytics.html %}

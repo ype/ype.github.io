@@ -23,7 +23,7 @@ header {
     vertical-align: top;
     margin: 0 auto;
     margin-top: 0;
-    font-family: "SabonNext RW SC", serif;
+    font-family: "SabonNext RW SC";
 }
 
 header, footer {
@@ -301,6 +301,7 @@ blockquote p {
     z-index: 2;
     background-color: rgba(98,98,98, 0.75);
     padding: 10px;
+    font-family: "Genericons";
 }
 
 .social-links a {

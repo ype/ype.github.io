@@ -37,7 +37,11 @@ header:before {
   {% include top.html %}
   <div id="home-title">
     <a href="{{ site.url }}">
-      <h1 class="branding"><i>ype</i></h1>
+      <h1 class="branding">
+        <i>
+          #! ype
+        </i>
+      </h1>
       <p style="font-size: 2.5em; font-weight: 100; color: #181818;">because sometimes different is better.</p>
     </a>
   </div>
@@ -72,6 +76,4 @@ header:before {
   {% endif %}
   {% endif %}
 </nav>
-<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
-  <p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
-</footer>
+{% include footer.html %}

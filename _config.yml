@@ -1,6 +1,6 @@
 # Dependencies
 markdown:	redcarpet
-pygments:	true
+highlighter:	pygments
 
 # Permalinks
 permalink:	/blog/:title
@@ -10,6 +10,20 @@ title:		ype
 tagline:	'a blog about stuff'
 description:	'A blog about stuff, and code, and electronics, and other stuff.'
 url:		http://ype.env.sh
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - assets/fonts
+    - assets/images
+    - assets/js
+    - assets/css
+  js_compressor: uglifier
+  cachebust: none
+  cache: false
+  gzip: [ text/css, application/javascript ]
+  debug: false
 
 author:
   name:		'anton'
@@ -26,6 +40,10 @@ social:
     url:	https://github.com/ype
     desc:	Fork me
 
+  - icon:       linkedin
+    url:        https://www.linkedin.com/in/01100001
+    desc:       linkedin
+
   - icon:	feed
     url:	http://ype.env.sh/atom.xml
     desc:	Feed
@@ -40,8 +58,31 @@ menu:
   - title:      Archive
     url:        /archive
 
+  # - title:      Embedded
+  #   url:	/embedded
+
 copyright:
   author:	anton
   url:		http://ype.env.sh
   type_title:	Some rights might be reserved, who really cares?
   type_url:	http://www.wtfpl.net/
+
+jekyll_ga:
+  service_account_email: '510038673471-hlfl257j4grm3mfdogh305fb6mmrp2et@developer.gserviceaccount.com'
+  key_file: ypeENV-ad306ea20623.p12  # service account private key file
+  key_secret: notasecret  # service account private key's password
+  profileID: ga:89942312        # profile ID
+  start: last month         # Beginning of report
+  end: now                  # End of report
+  metric: ga:pageviews      # Metric code
+  segment:                  # optional
+  filters:                  # optional
+  sort: false                # Sort posts by this metric
+
+jekyll_sort:
+  - src: posts
+    by: _ga 
+    direction: down
+    dest: posts_popular
+
+exclude: ["/ypeENV-ad306ea20623.p12"]

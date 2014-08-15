@@ -2,6 +2,7 @@
 title: virtually, a new beginning
 quote: building things awesome with orgmode
 created: 04-11-2013
+comments: true
 layout: post
 kind: article
 tags:
