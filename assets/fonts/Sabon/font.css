@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Sabon Expert BQ';
+  src: url('SabonExpertBQ-RomanOsF.eot'); /* IE9 Compat Modes */
+  src: url('SabonExpertBQ-RomanOsF.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('SabonExpertBQ-RomanOsF.woff') format('woff'), /* Modern Browsers */
+       url('SabonExpertBQ-RomanOsF.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('SabonExpertBQ-RomanOsF.svg#8d1e68be9b3a3cfbdf8d3797dfb3d68e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
