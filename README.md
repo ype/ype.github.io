@@ -1,4 +1,4 @@
 ype
 =============
 
-a blog about stuff made with nanoc
+a blog about stuff made with jekyll
