@@ -3,7 +3,7 @@
 <head>
 	<link href="http://gmpg.org/xfn/11" rel="profile">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<title>ype &middot; a blog about stuff</title>
+	<title>From Arduino to ARM &middot; ype</title>
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
@@ -22,23 +22,7 @@
 </head>
 
 <body>
-	<style>
-header:before {
-    content:'';
-    background: url(/assets/images/subtle_orange_emboss.png);
-    background-repeat:repeat;
-    width:100%;
-    height:100%;
-
-    /* The element is positioned relatively to the article tag */
-    position:absolute;
-    opacity: 0.35;
-}
-</style>
-
-<header class="clean"
-        style="background-image: url(/assets/images/sewKit.jpg);
-        height: 100%;">
+	<header class="clean" style="background-image: url(/assets/images/sewKit.jpg);height: 100%;">
   
   <label class="menu" for="_1">
   <span class="genericon genericon-menu"></span>
@@ -72,57 +56,67 @@ header:before {
   
 </div>
 
-  <div id="home-title">
-    <a href="http://ype.env.sh">
-      <h1 class="branding">
-        <i>
-          #! ype
-        </i>
-      </h1>
-      <p style="font-size: 2.5em; font-weight: 100; color: #181818;">because sometimes different is better.</p>
-    </a>
-  </div>
   <div id="nav-icon" style="bottom: 60px;">
     <a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-expand"></span></a>
   </div>
+  <div id="home-title">
+    <a href="http://ype.env.sh">
+      <img src="/assets/images/icon.png" class="site-icon-page">
+    </a>
+  </div>
+  <div id="post-info" style="bottom: 30px; text-align: center; line-height: 45px;">
+    <h1>From Arduino to ARM</h1>
+  </div>
 </header>
 <div id="article">
-  <div id="post-list">
-    
-    <div id="glow-block">
-      <span class="post-date">08 April 2014</span>
-      <a href="/blog/silver-searching-in-emacs">
-        <h1>Silver Searching in Emacs</h1>
-        <p class="post-description">I always seem to run into the constant problem of having to change multiple variables, symbols, function names, and other usually mundane parts of my code on a regular basis. Most likely due to the fact that I first name everything in a random, train of thought manner, only realising...</p>
-      </a>
-    </div>
-    <br>
-    
-    <div id="glow-block">
-      <span class="post-date">08 November 2013</span>
-      <a href="/blog/problematic-procrastination">
-        <h1>Problematic Procrastination</h1>
-        <p class="post-description">It never ceases to amaze me how long I can procrastinate before actually deciding to get shit done. It would maybe be not as troubling if I hated what I do on a daily basis, or the work that I had to get done was mind numbing dull, but it&rsquo;s...</p>
-      </a>
-    </div>
-    <br>
-    
-    <div id="glow-block">
-      <span class="post-date">04 November 2013</span>
-      <a href="/blog/virtually-a-new-beginning">
-        <h1>virtually, a new beginning</h1>
-        <p class="post-description">I decided, one fateful day (or maybe not so fateful, but rather ill-conceived) - that it would be a good idea to blog using orgmode. I use orgmode for many things - scheduling, expenses, charts of varying kind, time-tracking, the list goes on. Blogging in org seemed like a natural...</p>
-      </a>
-    </div>
-    <br>
-    
-  </div>
+  <h1>Get Started</h1>
+
+<ul>
+<li>  <a href="notes/stm-dev-notes.html">STM32 Development</a></li>
+</ul>
+
+<h1>Examples</h1>
+
+<ul>
+<li>  First Steps: Blink</li>
+<li>  Beyond the flashing light</li>
+</ul>
+
+<h1>Resources</h1>
+
+<p>Here is a list of resources I have helpful during the transition from
+Arduino to ARM development.</p>
+
+<ul>
+<li><p>STM32 Open Source Course</p>
+
+<ul>
+<li><a href="http://homes.soic.indiana.edu/geobrown/c335.php">Course Page</a></li>
+<li><a href="https://github.com/geoffreymbrown/STM32-Template">Build template for projects using the STM32VL-Discovery Board</a></li>
+<li>Book
+
+<ul>
+<li><a href="http://www.cs.indiana.edu/%7Egeobrown/book.pdf">Discovering the STM32 Microcontroller</a></li>
+</ul></li>
+</ul></li>
+<li><p>libopencm3</p>
+
+<ul>
+<li><a href="http://libopencm3.org/wiki/Main_Page">Wiki - Main Project Page</a></li>
+<li><a href="https://github.com/libopencm3/libopencm3">github/libopencm3</a></li>
+<li><a href="https://github.com/libopencm3/libopencm3-examples">github/libopencm3-examples</a></li>
+<li><a href="http://libopencm3.github.io/docs/latest/stm32f1/html/modules.html">libopencm3 API Documentation</a></li>
+</ul></li>
+<li><p>Reference Manuals</p>
+
+<ul>
+<li><a href="http://infocenter.arm.com/help/topic/com.arm.doc.ddi0337h/DDI0337H_cortex_m3_r2p0_trm.pdf">Cortex-M3 Reference Manual</a></li>
+<li><a href="http://www.st.com/web/en/resource/technical/document/reference_manual/CD00171190.pdf">RM0008: STM32F1xx</a></li>
+<li><a href="http://www.st.com/web/en/resource/technical/document/reference_manual/CD00246267.pdf">RM0041: STM32F100xx</a></li>
+</ul></li>
+</ul>
+
 </div>
-<nav class="pagination" role="navigation">
-  
-  <span class="page-number">Page 1 of 1</span>
-  
-</nav>
 <footer class="clean" style="background-image: url(/assets/images/sewKit.jpg); background-position: bottom; height: 60px;">
         <p class="copyright">&copy;2014, <a href="http://ype.env.sh" target="_blank">anton</a>. <a href="http://www.wtfpl.net/" target="_blank">Some rights might be reserved, who really cares?</a>.</p>
 </footer>

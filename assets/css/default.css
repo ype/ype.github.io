@@ -26,6 +26,12 @@ header {
     font-family: "SabonNext RW SC";
 }
 
+.subtitle {
+    font-family: "SabonNext RW SC";
+    font-size: 140px;
+    font-style: italic;
+}
+
 header, footer {
     position: relative;
     background-repeat: no-repeat;
