@@ -19,3 +19,5 @@ gem 'phrasie'
 gem 'guard'
 gem 'guard-jekyll-plus'
 gem 'guard-livereload'
+
+gem 'nokogiri'

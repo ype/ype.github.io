@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Fira Mono Regular";
+  src: url("/assets/fonts/fira/FiraMono-Regular-b50906de0146a7bcaf268648a102a1f5.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/fira/FiraMono-Regular-b50906de0146a7bcaf268648a102a1f5.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/fira/FiraMono-Regular-fd3a029f2a702c944b5249c575a24f8a.woff") format("woff"), url("/assets/fonts/fira/FiraMono-Regular-d7315f3f342f215da0a59a66cde4a326.ttf") format("truetype"), url("/assets/fonts/fira/FiraMono-Regular-7ed51906dd8f63d1a35da9f7ef2f9e03.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: "Fira Mono Bold";
+  src: url("/assets/fonts/fira/FiraMono-Bold-be7d8c7ab019bfa569369496fa2090bd.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/fira/FiraMono-Bold-be7d8c7ab019bfa569369496fa2090bd.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/fira/FiraMono-Bold-dd79a7d25b5befa372e4723d766bef2a.woff") format("woff"), url("/assets/fonts/fira/FiraMono-Bold-156c8567828ecb863d83417f6c8c6696.ttf") format("truetype"), url("/assets/fonts/fira/FiraMono-Bold-4fa4739d5817dc9982fa537f8b5c72ab.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: "New Baskerville Regular";
+  src: url("/assets/fonts/NewBasker/NewBaskerville-Roman-225ed67c71b8b20fcc9d7c09589b5c33.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/NewBasker/NewBaskerville-Roman-225ed67c71b8b20fcc9d7c09589b5c33.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NewBasker/NewBaskerville-Roman-0f4af1907e14b38991d9e541121b5b0d.woff") format("woff"), url("/assets/fonts/NewBasker/NewBaskerville-Roman-425b58e56d05f9637083c45e3298cb01.ttf") format("truetype"), url("/assets/fonts/NewBasker/NewBaskerville-Roman-68d36ffe9248a2ce47d06e6af9ec1868.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: "New Baskerville Italic";
+  src: url("/assets/fonts/NewBaskerItalic/NewBaskerville-Italic-67fde535a14367365bcdbde2d399315d.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/NewBaskerItalic/NewBaskerville-Italic-67fde535a14367365bcdbde2d399315d.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NewBaskerItalic/NewBaskerville-Italic-da3c445bd7a7a8e0bbd6938cbb01515f.woff") format("woff"), url("/assets/fonts/NewBaskerItalic/NewBaskerville-Italic-588ea113a7a4f82775356380123232af.ttf") format("truetype"), url("/assets/fonts/NewBaskerItalic/NewBaskerville-Italic-2cc68ac5efb3326de9b03cf68d95bb10.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: "New Baskerville Bold";
+  src: url("/assets/fonts/NewBaskerBold/NewBaskervilleITCbyBT-Bold-bc1aa8f5ed9a5cd723db46084f8413ee.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/NewBaskerBold/NewBaskervilleITCbyBT-Bold-bc1aa8f5ed9a5cd723db46084f8413ee.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NewBaskerBold/NewBaskervilleITCbyBT-Bold-b4ae52e64e5a32b8aab90940d41e7598.woff") format("woff"), url("/assets/fonts/NewBaskerBold/NewBaskervilleITCbyBT-Bold-fdf0a22029145c4932e64bfe0837d54b.ttf") format("truetype"), url("/assets/fonts/NewBaskerBold/NewBaskervilleITCbyBT-Bold-3a346b5a8fb9950180c5b3508796b3a7.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
