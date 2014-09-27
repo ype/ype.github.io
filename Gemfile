@@ -21,3 +21,9 @@ gem 'guard-jekyll-plus'
 gem 'guard-livereload'
 
 gem 'nokogiri'
+gem 'json'
+
+#Search
+gem 'jekyll-lunr-js-search'
+
+gem 'jekyll-tagging'

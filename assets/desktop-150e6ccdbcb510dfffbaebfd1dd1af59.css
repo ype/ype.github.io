@@ -111,7 +111,7 @@ img {
 
 .dropcap {
     float: left;
-    color: rgba(191, 64, 121, 0.75);
+    color: rgba(38, 38, 38, 0.75);
     font-size: 101px;
     line-height: 86px;
     padding-top: 4px;
@@ -430,7 +430,7 @@ blockquote p {
 .menu-content {
     display: block;
     width: auto;
-    left: 14px;
+    float: left;
     padding: 10px 0;
     border-radius: 0px 3px 3px 3px;
     text-align: left;

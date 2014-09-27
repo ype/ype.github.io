@@ -1,0 +1,12 @@
+{
+  "name": "ypeblog",
+  "version": "0.0.1",
+  "authors": [
+    "Anton Strilchuk <anton@env.sh>"
+  ],
+  "description"	: "blogzor",
+  "main"        : "_assets/js/app/bower.js",
+  "license"	: "MIT",
+  "homepage"    : "ype.env.sh",
+  "private"     : true
+}
