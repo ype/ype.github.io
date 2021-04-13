@@ -25,6 +25,8 @@ paginate = 5
   #(default is Description or Summary metadata in the front matter)
   rssFullText = true
 
+  summaryLength = 30
+
 [languages]
   [languages.en]
     title = "Env.sh"

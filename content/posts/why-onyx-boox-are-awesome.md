@@ -1,7 +1,7 @@
 ---
 title: "Why Onyx Boox Are Awesome"
 date: 2021-04-11T11:13:30+01:00
-draft: true
+draft: false
 ---
 
 Recently I've purchased an [Onyx Boox Note 3](https://www.boox.com/note3/), at first I was skeptical, but after having it for little over a day I decided it was so good I needed to write an article about it.
