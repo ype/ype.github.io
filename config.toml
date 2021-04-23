@@ -2,6 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
+summaryLength = 50
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -24,8 +25,6 @@ paginate = 5
   # Show full page content in RSS feed items
   #(default is Description or Summary metadata in the front matter)
   rssFullText = true
-
-  summaryLength = 30
 
 [languages]
   [languages.en]
