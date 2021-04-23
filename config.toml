@@ -10,7 +10,7 @@ summaryLength = 50
   contentTypeName = "posts"
 
   # "light" or "dark"
-  defaultTheme = "dark"
+  defaultTheme = "light"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
@@ -30,8 +30,8 @@ summaryLength = 50
   [languages.en]
     title = "Env.sh"
     subtitle = "because sometimes different is better."
-    keywords = "development, engineering, platform, paas, saas, linux, kubernetes, docker"
-    copyright = ""
+    keywords = "development, devops, engineering, platform, paas, saas, linux, kubernetes, docker, onyx"
+    copyright = "<small>Copyright ©2021 Anton Strilchuk</small>"
     menuMore = "Show more"
     writtenBy = "Written by"
     readMore = "Read more"
@@ -57,7 +57,7 @@ summaryLength = 50
         identifier = "about"
         name = "About"
         url = "/about"
-      # [[languages.en.menu.main]]
-      #   identifier = "posts"
-      #   name = "Posts"
-      #   url = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "rss"
+        name = "RSS"
+        url = "/index.xml"
